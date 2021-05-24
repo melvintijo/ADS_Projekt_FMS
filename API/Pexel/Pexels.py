@@ -13,7 +13,6 @@ api.search('cat', page=90, results_per_page=100)
 photos = api.get_entries()
 headers = CaseInsensitiveDict()
 headers["Authorization"] = "xxx"
-# Loop the five photos
 for photo in photos:
   # Print photographer
   print('Photographer: ', photo.photographer)
@@ -24,7 +23,7 @@ for photo in photos:
   a = urlparse(photo.large)
   filename = os.path.basename(a.path)
   r = requests.get(photo.large, headers=headers)
-  open('Cats/'+filename, 'wb').write(r.content)
+  open('cats/'+filename, 'wb').write(r.content)
 
 api.search('dog', page=90, results_per_page=100)
 # Get photo entries
