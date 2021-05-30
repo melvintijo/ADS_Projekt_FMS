@@ -1,4 +1,4 @@
-# API flickr
+# API Flickr
 
 Dog images:
 python scraper.py --group "https://www.flickr.com/groups/81037160@N00/" --original --max-pages 5
